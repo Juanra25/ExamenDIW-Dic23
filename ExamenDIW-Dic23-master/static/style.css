@@ -1,0 +1,132 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Sans-Serif;
+}
+
+/* Continuar desde aqui... */
+body {
+  display: grid;
+  grid-template-columns: 13rem auto;
+  grid-template-rows: auto 30px;
+  grid-template-areas: "aside main" "aside footer";
+}
+body aside {
+  grid-area: aside;
+  background-color: #002858;
+}
+body aside .divider {
+  height: 1px;
+  width: auto;
+  background-color: white;
+}
+body aside ul {
+  list-style: none;
+  padding: 0;
+}
+body aside ul li {
+  padding: 2rem;
+}
+body aside ul li a {
+  text-decoration: none;
+  color: white;
+}
+body aside ul li:hover {
+  background-color: #ffc836;
+}
+body aside ul li:hover a {
+  color: #002858;
+}
+body main {
+  grid-area: main;
+  background-color: rgba(0, 40, 88, 0.6666666667);
+  color: #ffc836;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+body main dialog {
+  width: 25%;
+}
+body main dialog form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+}
+body main dialog form div {
+  padding: 0.5rem;
+}
+body main dialog form div label {
+  margin: 1rem;
+}
+body main dialog form div input {
+  width: 8rem;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+body main dialog form div input#insert {
+  width: auto;
+  background-color: #ffc836;
+}
+body main dialog form div:has(input:focus) {
+  background-color: #ffc836;
+}
+body main dialog #confirmarBorrar {
+  background-color: #ffc836;
+}
+body main h1 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 3rem;
+}
+body main table {
+  margin: 1rem 8rem;
+  border: #ffc836 solid 4px;
+  border-collapse: collapse;
+}
+body main table thead {
+  color: #002858;
+  background-color: #ffc836;
+}
+body main table thead tr {
+  border: 2px solid #ffc836;
+}
+body main table thead tr th {
+  padding: 1rem;
+  border: 2px solid #ffc836;
+}
+body main table tbody tr {
+  border: 2px solid #ffc836;
+}
+body main table tbody tr td {
+  padding: 1rem;
+  border: 2px solid #ffc836;
+  text-align: center;
+}
+body main table tbody tr td:nth-child(6) {
+  background-color: #ffc836;
+  color: #002858;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  box-sizing: content-box;
+}
+body main table tbody tr td button {
+  background-color: #ffc836;
+  color: #002858;
+  height: 24px;
+}
+body main table tbody tr:hover {
+  background-color: #ffc836;
+  color: #002858;
+}
+body main table tbody tr:hover:nth-child(6) {
+  background-color: #ffc836;
+  border-color: #002858;
+}
+body footer {
+  grid-area: footer;
+  background-color: rgba(0, 40, 88, 0.6666666667);
+  color: #ffc836;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

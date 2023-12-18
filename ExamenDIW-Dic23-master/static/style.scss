@@ -1,0 +1,154 @@
+$azul : #002858;
+$azul2 : #002858aa;
+
+$amarillo: #ffc836;
+
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: Sans-Serif;
+}
+
+/* Continuar desde aqui... */
+body{
+    display: grid;
+    grid-template-columns:13rem auto ;
+    grid-template-rows: auto 30px;
+    grid-template-areas: 
+    "aside main"
+    "aside footer";
+    aside{
+        grid-area: aside;
+        background-color: $azul;
+        .divider{
+            height: 1px;
+            width: auto;
+            background-color: white;
+        }
+        ul{
+            list-style: none;
+            padding:0;
+            li{
+                padding: 2rem;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                &:hover{
+                    background-color: $amarillo;
+                    a{
+                        color:$azul
+                    }
+                }
+            }
+        }
+    }
+    main{
+        grid-area:main;
+        background-color: $azul2;
+        color: $amarillo;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        dialog{
+            width: 25%;
+            form{
+                display: flex;
+                flex-direction: column;
+                padding:2rem;
+                text-align: center;
+                
+                div{
+                    padding: 0.5rem;
+                    //margin:0.3rem 0;
+                    label{
+                        
+                        margin:1rem;
+                    }
+                    
+                    input{
+                        width: 8rem;
+                        box-sizing: border-box;
+                        margin-top: 4px;
+
+                        &#insert{
+                            width: auto;
+                            background-color: $amarillo;
+                        }
+                    }
+                    &:has(input:focus){
+                        background-color: $amarillo;
+                    }
+                }
+                
+            }
+            #confirmarBorrar{
+                background-color: $amarillo;
+            }
+        }
+        h1{
+            text-align: center;
+            padding:2rem;
+            font-size: 3rem;
+        }
+        table{
+            margin:1rem 8rem;
+            border: $amarillo solid 4px;
+            border-collapse: collapse;
+            thead{
+                color: $azul;
+                background-color: $amarillo;
+                tr{
+                    border:2px solid $amarillo;
+                    th{
+                        padding: 1rem;
+                        border:2px solid $amarillo;
+    
+                    }
+                }
+                
+            }
+            tbody{
+                tr{
+                    border:2px solid $amarillo;
+                    td{
+                        //background-color: $azul2;
+                        padding: 1rem;
+                        border:2px solid $amarillo;
+                        text-align: center;
+
+                        //REVISAR
+                        &:nth-child(6){
+                            //background-color: $azul2;
+                            background-color: $amarillo;
+                            color: $azul;
+                            border-radius: 2rem;
+                            font-size: 0.9rem;
+                            box-sizing: content-box;                            
+                        }
+                        button{
+                            background-color: $amarillo;
+                            color: $azul;
+                            height: 24px;
+                        }
+                    }
+                    &:hover{
+                        background-color: $amarillo;
+                        color:$azul;
+                        &:nth-child(6){
+                            background-color: $amarillo;
+                            border-color: $azul;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        grid-area: footer;
+        background-color: $azul2;
+        color: $amarillo;
+        text-align: center;
+        //padding-top: 2rem;;
+    }
+}

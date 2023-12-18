@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Desarrollo de Interfaces Web</title>
+    <meta name="author" content="Juan Ramón Rodríguez Segura">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <aside>
+        <img src="https://www.cesurformacion.com/uploads/media/logo-small/09/19-cesur-fp.svg?v=6-0" alt="Logo Cesur">
+        <ul>
+            <li><a href="#">Listado de entradas</a></li>
+            <li><a href="#" id="nueva">Nueva entrada</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Herramientas</a></li>
+        </ul>
+        <div class="divider"></div>
+        <ul>
+            <li><a href="#">Salir</a></li>
+        </ul>
+    </aside>
+    <main>
+        <dialog id="editForm">
+            <h2>Insertar nuevo coche</h2>
+            <form action="#" id>
+                <div>
+                <label for="matricula">Matrícula</label>
+                <input type="text" required name="matricula">
+            </div>
+            <div>
+                <label for="modelo">Modelo</label>
+                <input type="text" required name="modelo">
+            </div>
+                <div>
+                <label for="cliente">Cliente</label>
+                <input type="text" required name="cliente">
+            </div>
+                <div>
+                <label for="entrada">Entrada</label>
+                <input type="date" required name="entrada">
+            </div>
+                <div>
+                <label for="salida">Salida</label>
+                <input type="date" required name="salida">
+            </div>
+                <div>
+                <label for="tarifa">Tarifa</label>
+                <select name="tarifa" id="tarifa" required>
+                    <option value="estandar">Estándar</option>
+                    <option value="premium">Premium</option>
+                    <option value="oferta">Oferta</option>
+                </select>
+            </div>
+                <div>
+                    <input type="submit" id="insert" value="Insertar">
+                    <button id="cancelInsert">Cancelar</button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="borrarDialog">
+            <h2>Borrar coche</h2>
+            <p>¿Deseas borrar la entrada seleccionada?</p>
+            <input type="submit" value="Borrar" id="confirmarBorrar">
+            <button id="noBorrar">Mantener</button>
+        </dialog>
+        <h1>Listado de entradas</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Modelo</th>
+                    <th>Cliente</th>
+                    <th>Fecha de entrada</th>
+                    <th>Fecha de salida</th>
+                    <th>Tarifa</th>
+                    <th>Coste total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ABC123</td>
+                    <td>Toyota Camry</td>
+                    <td>Juan Pérez</td>
+                    <td>2023-01-05</td>
+                    <td>2023-01-10</td>
+                    <td>Estándar</td>
+                    <td>250€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>XYZ789</td>
+                    <td>Honda Civic</td>
+                    <td>Maria Rodríguez</td>
+                    <td>2023-02-12</td>
+                    <td>2023-02-18</td>
+                    <td>Premium</td>
+                    <td>280€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>DEF456</td>
+                    <td>Ford Mustang</td>
+                    <td>Carlos Gómez</td>
+                    <td>2023-03-20</td>
+                    <td>2023-03-25</td>
+                    <td>Oferta</td>
+                    <td>350€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>GHI789</td>
+                    <td>Chevrolet Malibu</td>
+                    <td>Ana López</td>
+                    <td>2023-04-08</td>
+                    <td>2023-04-15</td>
+                    <td>Estándar</td>
+                    <td>385€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>JKL012</td>
+                    <td>Nissan Altima</td>
+                    <td>Luis García</td>
+                    <td>2023-05-14</td>
+                    <td>2023-05-20</td>
+                    <td>Premium</td>
+                    <td>270€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>MNO345</td>
+                    <td>Hyundai Sonata</td>
+                    <td>Sofía Martinez</td>
+                    <td>2023-06-02</td>
+                    <td>2023-06-08</td>
+                    <td>Estándar</td>
+                    <td>288€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>PQR678</td>
+                    <td>Kia Forte</td>
+                    <td>Pedro Sánchez</td>
+                    <td>2023-07-11</td>
+                    <td>2023-07-18</td>
+                    <td>Oferta</td>
+                    <td>294€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>STU901</td>
+                    <td>Subaru Outback</td>
+                    <td>Marta Torres</td>
+                    <td>2023-08-19</td>
+                    <td>2023-08-25</td>
+                    <td>Premium</td>
+                    <td>360€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>VWX234</td>
+                    <td>Mercedes-Benz C-Class</td>
+                    <td>Ricardo Vargas</td>
+                    <td>2023-09-27</td>
+                    <td>2023-10-03</td>
+                    <td>Estándar</td>
+                    <td>480€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+                <tr>
+                    <td>YZA567</td>
+                    <td>Audi A4</td>
+                    <td>Isabel López</td>
+                    <td>2023-11-05</td>
+                    <td>2023-11-12</td>
+                    <td>Oferta</td>
+                    <td>525€</td>
+                    <td><button class="borrarCoche">Borrar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        Creado por Juan ramón Rodríguez Segura
+    </footer>
+    <script src="static/app.js"></script>
+
+</body>
+
+</html>
